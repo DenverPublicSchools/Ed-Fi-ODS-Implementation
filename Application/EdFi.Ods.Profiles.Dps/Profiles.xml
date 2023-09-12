@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Profiles>
+	<Profile name="Section-no-OfficialAttendance">
+		<Resource name="Section">
+			<ReadContentType memberSelection="ExcludeOnly" >
+				<Property name="OfficialAttendancePeriod" />
+			</ReadContentType>
+			<WriteContentType memberSelection="ExcludeOnly" >
+				<Property name="OfficialAttendancePeriod" />
+			</WriteContentType>
+		</Resource>
+	</Profile>
+
+	<Profile name="Section-OfficalAttendanceOnly">
+		<Resource name="Section">
+			<WriteContentType memberSelection="IncludeAll">
+				<Property name="OfficialAttendancePeriod" />
+			</WriteContentType>
+		</Resource>
+	</Profile>
+
+</Profiles>
