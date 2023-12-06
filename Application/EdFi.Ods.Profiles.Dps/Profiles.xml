@@ -12,8 +12,27 @@
 		</Resource>
 	</Profile>
 
+	<Profile name="ClassPeriod-no-OfficialAttendance">
+		<Resource name="ClassPeriod">
+			<ReadContentType memberSelection="ExcludeOnly" >
+				<Property name="OfficialAttendancePeriod" />
+			</ReadContentType>
+			<WriteContentType memberSelection="ExcludeOnly" >
+				<Property name="OfficialAttendancePeriod" />
+			</WriteContentType>
+		</Resource>
+	</Profile>
+
 	<Profile name="Section-OfficalAttendanceOnly">
 		<Resource name="Section">
+			<WriteContentType memberSelection="IncludeAll">
+				<Property name="OfficialAttendancePeriod" />
+			</WriteContentType>
+		</Resource>
+	</Profile>
+
+	<Profile name="ClassPeriod-OfficalAttendanceOnly">
+		<Resource name="ClassPeriod">
 			<WriteContentType memberSelection="IncludeAll">
 				<Property name="OfficialAttendancePeriod" />
 			</WriteContentType>
